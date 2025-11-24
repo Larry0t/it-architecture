@@ -1,0 +1,48 @@
+%%{init: {"flowchart": {"defaultRenderer": "elk"}} }%%
+
+graph TD
+  A[Architecture Vision / TOGAF Phase A] --> B[Business Architecture / TOGAF Phase B]
+  B --> C[Information & Application Architecture / TOGAF Phase C]
+  C --> D[Technology Architecture / TOGAF Phase D]
+  D --> E[Migration / Implementation / TOGAF Phases E–H]
+
+  subgraph DDD Modeling
+    B1[Identify Bounded Contexts] 
+    B2[Define Ubiquitous Language] 
+    C1[Context Map (Shared Kernel, ACL, Anti-Corruption)]  
+    C2[Aggregates, Entities, Value Objects]  
+    C3[Context APIs & Domain Events]  
+    D1[Map Contexts to Services / Modules]  
+    D2[Define Integration via Events / ACL]  
+    E1[Incremental Context Migration]  
+    E2[Evolve Context Maps / Aggregates]
+  end
+
+  B --> B1
+  B --> B2
+
+  C --> C1
+  C --> C2
+  C --> C3
+
+  D --> D1
+  D --> D2
+
+  E --> E1
+  E --> E2
+
+  style A fill:#f9f,stroke:#333,stroke-width:1px
+  style B fill:#bbf,stroke:#333,stroke-width:1px
+  style C fill:#bfb,stroke:#333,stroke-width:1px
+  style D fill:#fbf,stroke:#333,stroke-width:1px
+  style E fill:#ffb,stroke:#333,stroke-width:1px
+
+  style B1 fill:#eef,stroke:#333,stroke-width:1px
+  style B2 fill:#eef,stroke:#333,stroke-width:1px
+  style C1 fill:#efe,stroke:#333,stroke-width:1px
+  style C2 fill:#efe,stroke:#333,stroke-width:1px
+  style C3 fill:#efe,stroke:#333,stroke-width:1px
+  style D1 fill:#fef,stroke:#333,stroke-width:1px
+  style D2 fill:#fef,stroke:#333,stroke-width:1px
+  style E1 fill:#ffe,stroke:#333,stroke-width:1px
+  style E2 fill:#ffe,stroke:#333,stroke-width:1px
